@@ -142,8 +142,8 @@ local function initializeAbility()
         animationTrack1:AdjustSpeed(1.5)  -- Increase animation speed
         
         -- Zigzag movement variables
-        local zigzagDuration = 0.2  -- Duration for faster movement
-        local zigzagDistance = 10  -- Distance for more noticeable zigzag
+        local zigzagDuration = 0.25  -- Duration for faster movement
+        local zigzagDistance = 8  -- Distance for more noticeable zigzag
         local forwardForce = 50  -- Forward force
 
         -- Create tweens for zigzag movement
@@ -187,6 +187,7 @@ local function initializeAbility()
         end
 
         playZigzagTweens(1)
+    sound1:Stop()
     end
 
     -- Function to trigger the Jinpachi Turn ability
