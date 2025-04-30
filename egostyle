@@ -142,7 +142,7 @@ local function initializeAbility()
         animationTrack1:AdjustSpeed(1.5)  -- Increase animation speed
         
         -- Zigzag movement variables
-        local zigzagDuration = 0.35  -- Duration for faster movement
+        local zigzagDuration = 0.2  -- Duration for faster movement
         local zigzagDistance = 10  -- Distance for more noticeable zigzag
         local forwardForce = 50  -- Forward force
 
@@ -164,7 +164,7 @@ local function initializeAbility()
 
         -- Start zigzag movement
         local zigzagTweens = {}
-        for i = 1, 10 do  -- Adjust the number of zigzags as needed
+        for i = 1, 7 do  -- Adjust the number of zigzags as needed
             local direction = (i % 2 == 1) and 1 or -1
             local tween = createZigzagTween(direction, i)
             table.insert(zigzagTweens, tween)
