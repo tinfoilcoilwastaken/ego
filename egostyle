@@ -142,9 +142,9 @@ local function initializeAbility()
         animationTrack1:AdjustSpeed(1.5)  -- Increase animation speed
         
         -- Zigzag movement variables
-        local zigzagDuration = 0.55  -- Duration for faster movement
-        local zigzagDistance = 8  -- Distance for more noticeable zigzag
-        local forwardForce = 80  -- Forward force
+        local zigzagDuration = 0.35  -- Duration for faster movement
+        local zigzagDistance = 10  -- Distance for more noticeable zigzag
+        local forwardForce = 50  -- Forward force
 
         -- Create tweens for zigzag movement
         local function createZigzagTween(direction, index)
