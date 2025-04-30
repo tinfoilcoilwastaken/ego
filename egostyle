@@ -15,19 +15,6 @@ local function cleanup()
     end
 end
 
-local player = game:GetService("Players").LocalPlayer
-local character = player.Character or player.CharacterAdded:Wait()
-local st = player.PlayerGui:WaitForChild("Style").BG.StyleTxt
-local Slot = player.PlayerGui.Style.BG.Slots.ScrollingFrame.Slot1.Text
-local des = player.PlayerGui.Style.BG.Desc
-
- st.Text = "Ego Jinpachi"
-    st.TextColor3 = Color3.fromRGB(255, 192, 203)
-    Slot.Text = "Ego Jinpachi"
-    Slot.TextColor3 = Color3.fromRGB(255, 192, 203)
-    des.Text = "Founder of the Blue Lock Project"
-end
-
 local function initializeAbility()
     local character = player.Character or player.CharacterAdded:Wait()
     local humanoid = character:WaitForChild("Humanoid")
@@ -358,4 +345,17 @@ end)
 cleanup()
 if player.Character then
     initializeAbility()
+end
+
+local player = game:GetService("Players").LocalPlayer
+local character = player.Character or player.CharacterAdded:Wait()
+local st = player.PlayerGui:WaitForChild("Style").BG.StyleTxt
+local Slot = player.PlayerGui.Style.BG.Slots.ScrollingFrame.Slot1.Text
+local des = player.PlayerGui.Style.BG.Desc
+
+ st.Text = "Ego Jinpachi"
+    st.TextColor3 = Color3.fromRGB(255, 192, 203)
+    Slot.Text = "Ego Jinpachi"
+    Slot.TextColor3 = Color3.fromRGB(255, 192, 203)
+    des.Text = "Founder of the Blue Lock Project"
 end
