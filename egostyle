@@ -168,6 +168,7 @@ local function initializeAbility()
             local direction = (i % 2 == 1) and 1 or -1
             local tween = createZigzagTween(direction, i)
             table.insert(zigzagTweens, tween)
+            
         end
 
         -- Play the zigzag tweens sequentially
@@ -179,8 +180,6 @@ local function initializeAbility()
                 foggyAura.Enabled = false
                 return
             end
-
-animationTrack1:Play()  -- Replay the animation every 0.8 seconds
 
             local currentTween = zigzagTweens[index]
             currentTween:Play()
