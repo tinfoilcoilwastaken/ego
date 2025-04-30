@@ -353,6 +353,7 @@ local st = player.PlayerGui:WaitForChild("Style").BG.StyleTxt
 local Slot = player.PlayerGui.Style.BG.Slots.ScrollingFrame.Slot1.Text
 local des = player.PlayerGui.Style.BG.Desc
 
+while wait() do
  st.Text = "Ego Jinpachi"
     st.TextColor3 = Color3.fromRGB(255, 192, 203)
     Slot.Text = "Ego Jinpachi"
