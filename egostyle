@@ -181,7 +181,6 @@ local function initializeAbility()
             end
 
 animationTrack1:Play()  -- Replay the animation every 0.8 seconds
-        task.wait(0.8)
 
             local currentTween = zigzagTweens[index]
             currentTween:Play()
@@ -260,7 +259,7 @@ animationTrack1:Play()  -- Replay the animation every 0.8 seconds
     Clone1.Name = "FakeHeelFlickButton"
     Clone1.Parent = player.PlayerGui.InGameUI.Bottom.Abilities
     Clone1.LayoutOrder = -4
-    Clone1.Keybind.Text = "F"
+    Clone1.Keybind.Text = "T"
     Clone1.Timer.Text = "Egoistic Style"
     Clone1.ActualTimer.Text = ""
     Clone1.Cooldown:Destroy()
@@ -287,7 +286,7 @@ animationTrack1:Play()  -- Replay the animation every 0.8 seconds
     Clone4.Name = "SatoruShotButton"
     Clone4.Parent = player.PlayerGui.InGameUI.Bottom.Abilities
     Clone4.LayoutOrder = -1
-    Clone4.Keybind.Text = "C"
+    Clone4.Keybind.Text = "F"
     Clone4.Timer.Text = "Ego Bang"
     Clone4.ActualTimer.Text = ""
     Clone4.Cooldown:Destroy()
@@ -317,7 +316,7 @@ animationTrack1:Play()  -- Replay the animation every 0.8 seconds
     game:GetService("UserInputService").InputBegan:Connect(function(input, gameProcessed)
         if gameProcessed then return end  -- Ignore if the game has already processed this input (e.g., typing in chat)
 
-        if input.UserInputType == Enum.UserInputType.Keyboard and input.KeyCode == Enum.KeyCode.F then
+        if input.UserInputType == Enum.UserInputType.Keyboard and input.KeyCode == Enum.KeyCode.T then
             -- Trigger the Fake Heel Flick ability when the "Y" key is pressed
             triggerAbility1()
         end
@@ -327,12 +326,12 @@ animationTrack1:Play()  -- Replay the animation every 0.8 seconds
             triggerAbility2()
         end
 
-        if input.UserInputType == Enum.UserInputType.Keyboard and input.KeyCode == Enum.KeyCode.X then
+        if input.UserInputType == Enum.UserInputType.Keyboard and input.KeyCode == Enum.KeyCode.V then
             -- Trigger the Metavision ability when the "V" key is pressed
             triggerAbility3()
         end
 
-        if input.UserInputType == Enum.UserInputType.Keyboard and input.KeyCode == Enum.KeyCode.c then
+        if input.UserInputType == Enum.UserInputType.Keyboard and input.KeyCode == Enum.KeyCode.F then
             -- Trigger the Satoru Shot ability when the "T" key is pressed
             triggerAbility4()
         end
