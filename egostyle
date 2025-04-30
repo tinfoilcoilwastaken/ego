@@ -179,6 +179,10 @@ local function initializeAbility()
                 foggyAura.Enabled = false
                 return
             end
+
+animationTrack1:Play()  -- Replay the animation every 0.8 seconds
+        task.wait(0.8)
+
             local currentTween = zigzagTweens[index]
             currentTween:Play()
             currentTween.Completed:Connect(function()
@@ -187,7 +191,6 @@ local function initializeAbility()
         end
 
         playZigzagTweens(1)
-    sound1:Stop()
     end
 
     -- Function to trigger the Jinpachi Turn ability
