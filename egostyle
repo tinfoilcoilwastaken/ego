@@ -245,7 +245,8 @@ local function initializeAbility()
         animationTrack3:AdjustSpeed(7)
 
         -- Fire the ball after the animation finishes
-        animationTrack3.Stopped:Connect(function()
+wait(0.5)
+        function()
             local args = {
                 [1] = 132, 100  -- Adjust force as necessary
             }
