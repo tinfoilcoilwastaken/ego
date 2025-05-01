@@ -248,7 +248,7 @@ local function initializeAbility()
 wait(0.5)
         function()
             local args = {
-                [1] = 132, 100  -- Adjust force as necessary
+                [1] = 350, 100,  -- Adjust force as necessary
             }
             game:GetService("ReplicatedStorage").Packages.Knit.Services.BallService.RE.Shoot:FireServer(unpack(args))
         end)
