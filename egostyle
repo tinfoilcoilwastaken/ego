@@ -143,8 +143,8 @@ local function initializeAbility()
         
         -- Zigzag movement variables
         local zigzagDuration = 0.25  -- Duration for faster movement
-        local zigzagDistance = 8  -- Distance for more noticeable zigzag
-        local forwardForce = 50  -- Forward force
+        local zigzagDistance = 10  -- Distance for more noticeable zigzag
+        local forwardForce = 60  -- Forward force
 
         -- Create tweens for zigzag movement
         local function createZigzagTween(direction, index)
@@ -247,7 +247,7 @@ local function initializeAbility()
         -- Fire the ball after the animation finishes
         animationTrack3.Stopped:Connect(function()
             local args = {
-                [1] = 132,  -- Adjust force as necessary
+                [1] = 132, 100  -- Adjust force as necessary
             }
             game:GetService("ReplicatedStorage").Packages.Knit.Services.BallService.RE.Shoot:FireServer(unpack(args))
         end)
